@@ -1,0 +1,55 @@
+.workout {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 150px 120px 120px;
+  box-sizing: border-box;
+  background-image: url('../../../images/workout.jpg');
+  background-repeat: no-repeat;
+  background-position: top 150px right 120px;
+  height: 730px;
+
+  &__title {
+    font-family: $fontFamily;
+    line-height: 60px;
+    font-weight: $fontWeightBold;
+    color: $fontColorGrey;
+    margin: 0 0 50px 0;
+    max-width: 460px;
+    font-size: 55px;
+  }
+
+  &__text {
+    margin: 0;
+    font-family: $fontFamily;
+    font-weight: $fontWeightRegular;
+    line-height: 28px;
+    color: $fontColorLightGrey;
+    max-width: 460px;
+    font-size: 18px;
+  }
+
+  &__app-items {
+    padding: 0;
+    margin: auto 0 0 0;
+    list-style: none;
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &__app-item {
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    line-height: 28px;
+    color: $fontColorGrey;
+    margin: 0;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      color: $fontColorGreyHover;
+    }
+  }
+}

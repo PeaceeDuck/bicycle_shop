@@ -1,0 +1,24 @@
+.footer {
+  background-color: #EFEFEF;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1440px;
+    box-sizing: border-box;
+    padding: 80px 120px 60px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+
+  &__copyright {
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    font-size: 14px;
+    color: #CFCFCF;
+    margin: 0;
+  }
+}

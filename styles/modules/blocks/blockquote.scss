@@ -1,0 +1,49 @@
+.blockquote {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 640px;
+  padding: 120px 120px 60px;
+  justify-content: space-between;
+  column-gap: 80px;
+  box-sizing: border-box;
+
+  &__image {
+    width: 650px;
+    height: 460px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__text {
+    margin: 0 0 auto 0;
+    font-family: $fontFamily;
+    color: $fontColorGrey;
+    font-weight: $fontWeightSemiBold;
+    line-height: 44px;
+    letter-spacing: -.5px;
+    font-size: 34px;
+  }
+
+  &__author {
+    margin: 0 0 8px 0;
+    font-family: $fontFamily;
+    color: $fontColorGrey;
+    font-weight: $fontWeightMedium;
+    line-height: 32px;
+    font-size: 20px;
+  }
+
+  &__job {
+    margin: 0;
+    font-family: $fontFamily;
+    color: $fontColorLightGrey;
+    font-weight: $fontWeightRegular;
+    line-height: 32px;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  height: 74px;
+  max-width: 1440px;
+  padding: 28px 120px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  &__items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    column-gap: 34px;
+  }
+
+  &__item {
+    font-family: $fontFamily;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: $fontWeightMedium;
+    color: $fontColorGrey;
+    cursor: pointer;
+
+    &:hover {
+      color: $fontColorGreyHover;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.promo {
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  padding: 80px 0 0 120px;
+  box-sizing: border-box;
+  background-image: url('../../../images/promo.jpg');
+  background-repeat: no-repeat;
+  background-position: top 20px right 0;
+  height: 856px;
+
+  &__title {
+    font-family: $fontFamily;
+    line-height: 60px;
+    font-weight: $fontWeightBold;
+    color: $fontColorGrey;
+    margin: 0 0 50px 0;
+    max-width: 460px;
+    font-size: 55px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 20px;
+    right: 0;
+  }
+
+  &__text {
+    font-family: $fontFamily;
+    font-weight: $fontWeightRegular;
+    line-height: 28px;
+    color: $fontColorLightGrey;
+    max-width: 460px;
+    margin: 0 0 50px 0;
+    font-size: 18px;
+  }
+
+  &__bike-name {
+    font-family: $fontFamily;
+    color: $fontColorGrey;
+    font-weight: $fontWeightRegular;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 18px;
+
+    &::after {
+      content: '';
+      margin-left: 30px;
+      width: 132px;
+      height: 2px;
+      background-color: #D7D4D4;
+    }
+  }
+
+  &__bike-container {
+    position: absolute;
+    top: 347px;
+    right: 0;
+    width: 810px;
+    height: 430px;
+  }
+
+  &__bike-fixed {
+    position: sticky;
+    top: 347px;
+    left: 630px;
+    width: 440px;
+    height: 300px;
+    background-color: #f4f4f4;
+    background-image: url("../../../images/Cannondate_Systemsix_Himod.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: -20px 60px 220px rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: -20px 60px 220px rgba(0, 0, 0, .26);
+    }
+  }
+}

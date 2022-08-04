@@ -1,0 +1,71 @@
+.mailing-form {
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-family: $fontFamily;
+    line-height: 32px;
+    font-weight: $fontWeightSemiBold;
+    color: $fontColorGrey;
+    font-size: 24px;
+    width: 229px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 360px;
+    height: 50px;
+    border: 1px solid rgba(199, 199, 199, 0.5);
+    border-radius: 4px;
+    background-color: #EFEFEF;
+    cursor: pointer;
+    font-family: $fontFamily;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: $fontWeightMedium;
+    padding-left: 20px;
+    box-sizing: border-box;
+
+    &::-moz-placeholder {
+      color: $fontColorLightGrey;
+    }
+
+    &::-webkit-input-placeholder{
+      color: $fontColorLightGrey;
+    }
+
+    &:hover {
+      color: $fontColorGrey;
+
+      &::-moz-placeholder {
+        color: $fontColorGrey;
+      }
+
+      &::-webkit-input-placeholder{
+        color: $fontColorGrey;
+      }
+    }
+
+    &:active, &:focus {
+      outline: 0;
+      outline-offset: 0;
+      border: 1px solid rgba(199, 199, 199);
+      color: $fontColorGrey;
+
+      &::-moz-placeholder {
+        color: $fontColorGrey;
+      }
+
+      &::-webkit-input-placeholder{
+        color: $fontColorGrey;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.bike-card {
+  &__image {
+    height: 340px;
+    width: 340px;
+    border: 20px solid $BGLight;
+    border-radius: 20px;
+    box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 20px 140px rgba(0, 0, 0, .11);
+    }
+  }
+
+  &__name {
+    margin: 0 0 0 6px;
+    font-family: $fontFamily;
+    color: $fontColorGrey;
+    font-weight: $fontWeightSemiBold;
+    line-height: 28px;
+    font-size: 18px;
+  }
+}

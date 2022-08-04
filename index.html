@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
 <head>
   <meta charset="UTF-8">
   <title>Road Club</title>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
-
+<body class="page">
+<header class="header">
+  <ul class="header__items">
+    <li class="header__item">
+      <a href="#route" class="link">Покрытия и градиенты</a>
+    </li>
+    <li class="header__item">
+      <a href="#bike" class="link">Велосипеды</a>
+    </li>
+    <li class="header__item">
+      <a href="#workout" class="link">Тренировки</a>
+    </li>
+  </ul>
+</header>
+<main>
+  <section class="promo">
+    <h2 class="promo__title">Шоссе, ТТ и&nbsp;Грэвел</h2>
+    <p class="promo__text">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+    <a href="#bike" class="link"><button class="more-btn more-btn_margin_bottom">Подробнее</button></a>
+    <p class="promo__bike-name">Cannondale Systemsix</p>
+    <div class="promo__bike-container">
+      <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J" class="link" target="_blank"><div class="promo__bike-fixed"></div></a>
+    </div>
+  </section>
+  <section class="blockquote">
+    <img class="blockquote__image" src="./images/blockquote.jpg">
+    <div class="blockquote__info">
+      <blockquote class="blockquote__text">&laquo;Катайся много или мало, долго или коротко, как хочешь - но катайся&raquo;</blockquote>
+      <p class="blockquote__author">Эдди Меркс</p>
+      <p class="blockquote__job">Велогонщик</p>
+    </div>
+  </section>
+  <section class="route" id="route">
+    <h2 class="route__title">Шоссе</h2>
+    <p class="route__text">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.</p>
+    <div class="route__images">
+      <img class="route__image" src="images/highway1.jpg">
+      <img class="route__image" src="images/highway2.jpg">
+      <img class="route__image" src="images/highway3.jpg">
+      <div class="route__track">
+      </div>
+    </div>
+    <button class="nav-btn nav-btn_direction_left"></button>
+    <button class="nav-btn nav-btn_direction_right"></button>
+  </section>
+  <section class="bike" id="bike">
+    <div class="bike__info">
+      <h2 class="bike__title">Велосипеды</h2>
+      <ul class="bike__types">
+        <li class="bike__type"><a class="link">Шоссе</a></li>
+        <li class="bike__type"><a class="link">Грэвел</a></li>
+        <li class="bike__type"><a class="link">TT</a></li>
+      </ul>
+    </div>
+    <div class="bike__cards">
+      <div class="bike-card">
+        <a href="" class="link" target="_blank">
+          <img class="bike-card__image" src="./images/Cervelo_Caledonia-5.png">
+        </a>
+        <p class="bike-card__name">Cervelo Caledonia-5</p>
+      </div>
+      <div class="bike-card">
+        <a href="" class="link" target="_blank"><img class="bike-card__image" src="./images/Cannondate_Systemsix_Himod.png"></a>
+        <p class="bike-card__name">Cannondale Systemsix Himod</p>
+      </div>
+      <div class="bike-card">
+        <a href="" class="link" target="_blank"><img class="bike-card__image" src="./images/Trek_Domane_SL-7.png"></a>
+        <p class="bike-card__name">Trek Domane SL-7</p>
+      </div>
+    </div>
+  </section>
+  <section class="workout" id="workout">
+    <h2 class="workout__title">Тренировки</h2>
+    <p class="workout__text">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный план.</p>
+    <ul class="workout__app-items">
+      <li class="workout__app-item">
+        <a href="https://www.strava.com" class="link" target="_blank">Strava</a>
+      </li>
+      <li class="workout__app-item">
+        <a href="https://www.komoot.com" class="link" target="_blank">Komoot</a>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer__container">
+    <form class="mailing-form">
+      <fieldset class="mailing-form__fieldset">
+        <label class="mailing-form__label" for="mailing-form__input">Подпишитесь на рассылку &mdash;</label>
+        <input class="mailing-form__input" placeholder="Ваш e-mail" type="email" id="mailing-form__input">
+      </fieldset>
+    </form>
+    <div class="footer__info">
+      <p class="footer__copyright">&copy; Road Club 2021</p>
+      <div class="theme">
+        <img class="theme__image" src="./images/components/theme_light.svg">
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <span class="switch__slider"></span>
+        </label>
+        <img class="theme__image" src="./images/components/theme_dark.svg">
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
