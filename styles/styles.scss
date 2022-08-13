@@ -1,5 +1,6 @@
 @import '../vendor/fonts/font';
 @import './modules/variables';
+@import './modules/variables_light-theme';
 @import './modules/mixins';
 @import './modules/functions';
 @import './modules/blocks/html';
@@ -18,3 +19,5 @@
 @import './modules/blocks/mailing-form';
 @import './modules/blocks/theme';
 @import './modules/blocks/switch';
+@import './modules/blocks/burger-menu';
+@import './modules/blocks/popup';

@@ -1,7 +1,9 @@
 .page {
   font-family: $fontFamily;
-  background-color: $BGLight;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  @include background($light-theme: true);
+  &_theme_dark {
+    @include background($light-theme: false);
+  }
 }

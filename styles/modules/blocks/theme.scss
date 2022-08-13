@@ -5,7 +5,16 @@
   align-items: center;
 
   &__image {
-    width: 28px;
     height: 28px;
+
+    &_light {
+      background-image: url("/images/components/lightTheme_light.svg");
+      width: 28px;
+    }
+
+    &_dark {
+      background-image: url("/images/components/DarkTheme_light.svg");
+      width: 19px;
+    }
   }
 }

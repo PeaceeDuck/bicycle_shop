@@ -8,16 +8,21 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 120px;
+
+    @media screen and (max-width: 460px) {
+      flex-direction: column;
+      margin: 0 18px 0;
+    }
   }
 
   &__title {
-    font-family: $fontFamily;
-    line-height: 60px;
-    font-weight: $fontWeightBold;
-    color: $fontColorGrey;
+    @include title-text;
     max-width: 460px;
-    font-size: 55px;
     margin: 0;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
   }
 
   &__types {
@@ -27,25 +32,90 @@
     margin: 0;
     padding: 0;
     align-items: flex-end;
+
+    @media screen and (max-width: 460px) {
+      display: none;
+    }
   }
 
   &__type {
-    font-family: $fontFamily;
-    font-weight: $fontWeightRegular;
-    line-height: 40px;
-    color: $fontColorLightGrey;
+    @include description-text;
     margin: 0;
-    font-size: 18px;
     cursor: pointer;
+    @include textDimWithHover($light-theme: true);
+    body.page_theme_dark & {
+      @include textDimWithHover($light-theme: false);
+    }
 
-    &:hover {
-      color: $fontColorLightGreyHover;
+    &_selected {
+      font-weight: $fontWeightSemiBold;
+      @include textWithHover($light-theme: true);
+      body.page_theme_dark & {
+        @include textWithHover($light-theme: false);
+      }
+    }
+  }
+
+  &__label {
+    @media screen and (min-width: 461px) {
+      display: none;
+    }
+  }
+
+  &__select {
+    margin-top: 40px;
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    font-size: 11px;
+    line-height: 14px;
+    border: 1px solid #E3E3E3;
+    height: 30px;
+    width: 114px;
+    border-radius: 2px;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+    @include background($light-theme: true);
+    body.page_theme_dark & {
+      @include background($light-theme: false);
+    }
+  }
+
+  &__option {
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    font-size: 11px;
+    line-height: 14px;
+    display: inline;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
     }
   }
 
   &__cards {
-    display: flex;
     column-gap: 30px;
-    overflow-x: scroll;
+    display: none;
+
+    @media screen and (max-width: 460px) {
+      width: 100%;
+      margin: 20px 0 20px;
+      column-gap: 25vw;
+      overflow: hidden;
+      box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &_selected {
+      display: flex;
+    }
+  }
+
+  @media screen and (max-width: 460px) {
+    padding: 40px 0 0;
   }
 }

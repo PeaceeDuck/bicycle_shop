@@ -1,0 +1,79 @@
+.popup {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity .2s linear;
+  @include background($light-theme: true);
+  body.page_theme_dark & {
+    @include background($light-theme: false);
+  }
+
+  &__header {
+    height: 74px;
+    display: flex;
+  }
+
+  &__close-button {
+    border: 0;
+    background-color: transparent;
+    width: 18px;
+    height: 19px;
+    padding: 0;
+    position: relative;
+    margin: 25px 20px auto auto;
+  }
+
+  &__line {
+    position: absolute;
+    top: 9px;
+    right: -2px;
+    width: 22px;
+    height: 3px;
+    @include burgerLine($light-theme: true);
+    body.page_theme_dark & {
+      @include burgerLine($light-theme: false);
+    }
+
+    &:first-of-type {
+      transform: rotate(45deg);
+    }
+
+    &:last-of-type {
+      transform: rotate(135deg);
+    }
+  }
+
+  &__items {
+    padding: 0;
+    margin: 70px 0 0;
+    list-style: none;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    align-items: center;
+  }
+
+  &__item {
+    font-family: $fontFamily;
+    font-weight: $fontWeightMedium;
+    font-size: 18px;
+    line-height: 1;
+    @include textWithHover($light-theme: true);
+    body.page_theme_dark & {
+      @include textWithHover($light-theme: false);
+    }
+  }
+
+  &__theme {
+    width: 138px;
+    margin: auto auto 32px;
+  }
+}

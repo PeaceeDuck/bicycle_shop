@@ -5,17 +5,35 @@
     border: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
   &__label {
     font-family: $fontFamily;
     line-height: 32px;
     font-weight: $fontWeightSemiBold;
-    color: $fontColorGrey;
     font-size: 24px;
     width: 229px;
     margin-bottom: 50px;
     cursor: pointer;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+
+    @media screen and (max-width: 460px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__input-container {
+    width: 360px;
+    height: 50px;
+    position: relative;
+
+    @media screen and (max-width: 460px) {
+      width: 100%;
+    }
   }
 
   &__input {
@@ -23,7 +41,6 @@
     height: 50px;
     border: 1px solid rgba(199, 199, 199, 0.5);
     border-radius: 4px;
-    background-color: #EFEFEF;
     cursor: pointer;
     font-family: $fontFamily;
     font-size: 13px;
@@ -31,24 +48,43 @@
     font-weight: $fontWeightMedium;
     padding-left: 20px;
     box-sizing: border-box;
+    @include footer-background($light-theme: true);
+    body.page_theme_dark & {
+      @include footer-background($light-theme: false);
+    }
 
     &::-moz-placeholder {
-      color: $fontColorLightGrey;
+      @include textDim($light-theme: true);
+      body.page_theme_dark & {
+        @include textDim($light-theme: false);
+      }
     }
 
     &::-webkit-input-placeholder{
-      color: $fontColorLightGrey;
+      @include textDim($light-theme: true);
+      body.page_theme_dark & {
+        @include textDim($light-theme: false);
+      }
     }
 
     &:hover {
-      color: $fontColorGrey;
+      @include text($light-theme: true);
+      body.page_theme_dark & {
+        @include text($light-theme: false);
+      }
 
       &::-moz-placeholder {
-        color: $fontColorGrey;
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
       }
 
       &::-webkit-input-placeholder{
-        color: $fontColorGrey;
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
       }
     }
 
@@ -56,16 +92,42 @@
       outline: 0;
       outline-offset: 0;
       border: 1px solid rgba(199, 199, 199);
-      color: $fontColorGrey;
+      @include text($light-theme: true);
+      body.page_theme_dark & {
+        @include text($light-theme: false);
+      }
 
       &::-moz-placeholder {
-        color: $fontColorGrey;
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
       }
 
       &::-webkit-input-placeholder{
-        color: $fontColorGrey;
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
       }
 
     }
+
+    @media screen and (max-width: 460px) {
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    padding: 0;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+    font-size: 13px;
+    font-weight: $fontWeightMedium;
+    line-height: 28px;
+    border: 0;
+    cursor: pointer;
+    display: none;
   }
 }

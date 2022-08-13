@@ -2,23 +2,37 @@
   border: 0;
   width: 50px;
   height: 50px;
-  background-color: #EBEBEB;
   border-radius: 25px;
   padding: 0;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  @include btnColor($light-theme: true);
+  body.page_theme_dark & {
+    @include btnColor($light-theme: false);
+  }
 
   &_direction_right {
-    background-image: url("../../../images/components/rghtarr.svg");
-    margin-left: 20px;
+    @include btnRight($light-theme: true);
+    body.page_theme_dark & {
+      @include btnRight($light-theme: false);
+    }
   }
 
   &_direction_left {
-    background-image: url("../../../images/components/lftarr.svg");
+    @include btnLeft($light-theme: true);
+    body.page_theme_dark & {
+      @include btnLeft($light-theme: false);
+    }
   }
 
   &:hover {
-    opacity: .7;
+    opacity: .6;
+  }
+
+  @media screen and (max-width: 460px) {
+    width: 24px;
+    height: 24px;
+    background-size: auto 10px;
   }
 }
