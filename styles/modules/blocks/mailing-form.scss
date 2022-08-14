@@ -21,17 +21,17 @@
       @include text($light-theme: false);
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       margin-bottom: 40px;
     }
   }
 
-  &__input-container {
+  &__container {
     width: 360px;
     height: 50px;
     position: relative;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       width: 100%;
     }
   }
@@ -51,6 +51,10 @@
     @include footer-background($light-theme: true);
     body.page_theme_dark & {
       @include footer-background($light-theme: false);
+    }
+    @include textDim($light-theme: true);
+    body.page_theme_dark & {
+      @include textDim($light-theme: false);
     }
 
     &::-moz-placeholder {
@@ -113,7 +117,7 @@
 
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       width: 100%;
     }
   }
@@ -129,5 +133,13 @@
     border: 0;
     cursor: pointer;
     display: none;
+    @include footer-background($light-theme: true);
+    body.page_theme_dark & {
+      @include footer-background($light-theme: false);
+    }
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
   }
 }

@@ -8,13 +8,19 @@
     height: 28px;
 
     &_light {
-      background-image: url("/images/components/lightTheme_light.svg");
       width: 28px;
+      @include lightThemeImage($light-theme: true);
+      body.page_theme_dark & {
+        @include lightThemeImage($light-theme: false);
+      }
     }
 
     &_dark {
-      background-image: url("/images/components/DarkTheme_light.svg");
       width: 19px;
+      @include darkThemeImage($light-theme: true);
+      body.page_theme_dark & {
+        @include darkThemeImage($light-theme: false);
+      }
     }
   }
 }

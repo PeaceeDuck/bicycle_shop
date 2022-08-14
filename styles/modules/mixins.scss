@@ -4,10 +4,16 @@
   font-weight: $fontWeightBold;
   font-size: 55px;
   letter-spacing: -.5px;
-  
-  @media screen and (max-width: 460px) {
+  max-width: 460px;
+  @include text($light-theme: true);
+  body.page_theme_dark & {
+    @include text($light-theme: false);
+  }
+
+  @media screen and (max-width: 1220px) {
     font-size: 32px;
     line-height: 40px;
+    max-width: 200px;
   }
 }
 
@@ -16,8 +22,13 @@
   font-weight: $fontWeightRegular;
   line-height: 28px;
   font-size: 18px;
+  max-width: 460px;
+  @include textDim($light-theme: true);
+  body.page_theme_dark & {
+    @include textDim($light-theme: false);
+  }
 
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 1220px) {
     font-size: 12px;
     line-height: 18px;
   }
@@ -83,6 +94,18 @@
   }
 }
 
+@mixin bikeCardText ($light-theme: true) {
+  @if $light-theme {
+    color: $fontColorGrey;
+  } @else {
+    color: $fontColorWhite;
+
+    @media screen and (max-width: 1220px) {
+      color: #151515;
+    }
+  }
+}
+
 @mixin  btnColor ($light-theme: true) {
   @if $light-theme {
     background-color: $btnColorLight;
@@ -93,40 +116,64 @@
 
 @mixin btnRight ($light-theme: true) {
   @if $light-theme {
-    background-image: url("/images/components/rghtarr.svg")
+    background-image: url("../images/components/rghtarr.svg")
   } @else {
-    background-image: url("/images/components/rghtarr_dark.svg")
+    background-image: url("../images/components/rghtarr_dark.svg")
   }
 }
 
 @mixin btnLeft ($light-theme: true) {
   @if $light-theme {
-    background-image: url("/images/components/lftarr.svg")
+    background-image: url("../images/components/lftarr.svg")
   } @else {
-    background-image: url("/images/components/lftarr_dark.svg")
+    background-image: url("../images/components/lftarr_dark.svg")
   }
 }
 
 @mixin lightThemeImage ($light-theme: true) {
   @if $light-theme {
-    background-image: url("/images/components/lightTheme_light.svg")
+    background-image: url("../images/components/lightTheme_light.svg")
   } @else {
-    background-image: url("/images/components/lightTheme_dark.svg")
+    background-image: url("../images/components/lightTheme_dark.svg")
   }
 }
 
 @mixin darkThemeImage ($light-theme: true) {
   @if $light-theme {
-    background-image: url("/images/components/darkTheme_light.svg")
+    background-image: url("../images/components/darkTheme_light.svg")
   } @else {
-    background-image: url("/images/components/darkTheme_dark.svg")
+    background-image: url("../images/components/darkTheme_dark.svg")
   }
 }
 
 @mixin burgerLine ($light-theme: true) {
   @if $light-theme {
-    background-image: url("/images/components/nav_menu_line.svg")
+    background-image: url("../images/components/nav_menu_line.svg")
   } @else {
-    background-image: url("/images/components/nav_menu_line_dark.svg")
+    background-image: url("../images/components/nav_menu_line_dark.svg")
+  }
+}
+
+@mixin lineColor ($light-theme: true) {
+  @if $light-theme {
+    background-color: #D7D4D4;
+  } @else {
+    background-color: #707070;
+  }
+}
+
+@mixin borderLineColor ($light-theme: true) {
+  @if $light-theme {
+    border-color: #E3E3E3;
+  } @else {
+    border-color: #707070;
+  }
+}
+
+@mixin dropDown ($light-theme: true) {
+  @if $light-theme {
+    background-image: url("../images/components/dropdown_light.svg");
+  } @else {
+    background-image: url("../images/components/dropdown_dark.svg");
   }
 }

@@ -12,7 +12,7 @@
     width: 650px;
     height: 460px;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       width: 284px;
       height: 204px;
       align-self: center;
@@ -37,7 +37,7 @@
       @include text($light-theme: false);
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       font-size: 23px;
       line-height: 29px;
       margin-bottom: 37px;
@@ -55,7 +55,7 @@
       @include text($light-theme: false);
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       font-size: 14px;
       line-height: 22px;
       margin-bottom: 4px;
@@ -73,17 +73,21 @@
       @include textDim($light-theme: false);
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       font-size: 10px;
       line-height: 16px;
     }
   }
 
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 1220px) {
     flex-direction: column;
     padding: 20px 0 80px;
     margin: 0 18px 0;
     row-gap: 40px;
-    border-top: 1px solid rgba(227, 227, 227, 1);
+    border-top: 1px solid;
+    @include borderLineColor($light-theme: true);
+    body.page_theme_dark & {
+      @include borderLineColor($light-theme: false);
+    }
   }
 }

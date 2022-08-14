@@ -52,12 +52,12 @@
   &_margin_bottom {
     margin-bottom: 167px;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       margin-bottom: 0;
     }
   }
 
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 1220px) {
     width: 100%;
     height: 46px;
     margin: 0 auto;

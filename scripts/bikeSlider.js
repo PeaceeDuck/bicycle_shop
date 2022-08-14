@@ -1,8 +1,8 @@
-const radioButtons = document.querySelector('.bike-card__radio-buttons')
+const radioButtons = document.querySelector('.bike__radio-buttons')
 
 radioButtons.addEventListener('change', function () {
   const cardsSelected = document.querySelector('.bike__cards_selected');
-  let radioButton = radioButtons.querySelector('.bike-card__radio:checked');
+  let radioButton = radioButtons.querySelector('.bike__radio:checked');
   if (radioButton.id === 'radio1') {
     const firstCard = cardsSelected.querySelector('.bike-card:first-of-type');
     firstCard.style.marginLeft = "calc(50vw - 142px)";
@@ -72,7 +72,7 @@ function CheckAction() {
       if (d.x > 0) //Если значение больше нуля, значит пользователь двигал пальцем справа налево
       {
         const cardsSelected = document.querySelector('.bike__cards_selected');
-        const radioButton = radioButtons.querySelector('.bike-card__radio:checked');
+        const radioButton = radioButtons.querySelector('.bike__radio:checked');
         const firstRadioButton = document.getElementById('radio1');
         const secondRadioButton = document.getElementById('radio2');
         const thirdRadioButton = document.getElementById('radio3');
@@ -92,7 +92,7 @@ function CheckAction() {
       } else //Иначе он двигал им слева направо
       {
         const cardsSelected = document.querySelector('.bike__cards_selected');
-        const radioButton = radioButtons.querySelector('.bike-card__radio:checked');
+        const radioButton = radioButtons.querySelector('.bike__radio:checked');
         const firstRadioButton = document.getElementById('radio1');
         const secondRadioButton = document.getElementById('radio2');
         const thirdRadioButton = document.getElementById('radio3');

@@ -1,8 +1,9 @@
 @import '../vendor/fonts/font';
 @import './modules/variables';
-@import './modules/variables_light-theme';
 @import './modules/mixins';
 @import './modules/functions';
+@import './modules/blocks/title';
+@import './modules/blocks/description-text';
 @import './modules/blocks/html';
 @import './modules/blocks/page';
 @import './modules/blocks/link';

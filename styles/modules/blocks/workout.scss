@@ -4,35 +4,24 @@
   justify-content: flex-start;
   margin: 0 auto;
   max-width: 1440px;
-  padding: 150px 120px 120px;
+  padding: 148px 120px 120px;
   box-sizing: border-box;
-  background-image: url('../../../images/workout.jpg');
+  background-image: url('../images/workout.jpg');
   background-repeat: no-repeat;
-  background-position: top 150px right 120px;
+  background-position: top 145px right 120px;
   height: fit-content;
 
   &__title {
-    @include title-text;
     margin: 0 0 44px 0;
-    max-width: 460px;
-    @include text($light-theme: true);
-    body.page_theme_dark & {
-      @include text($light-theme: false);
-    }
 
-    @media screen and (max-width: 460px) {
-      margin-bottom: 302px;
+    @media screen and (max-width: 1220px) {
+      margin-bottom: 304px;
     }
   }
 
   &__text {
     margin: 0;
-    @include description-text;
     max-width: 460px;
-    @include textDim($light-theme: true);
-    body.page_theme_dark & {
-      @include textDim($light-theme: false);
-    }
   }
 
   &__app-items {
@@ -42,7 +31,7 @@
     display: flex;
     column-gap: 30px;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       font-size: 14px;
       line-height: 20px;
       margin-top: 40px;
@@ -61,17 +50,21 @@
       @include textWithHover($light-theme: false);
     }
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       font-size: 14px;
       line-height: 20px;
     }
   }
 
-  @media screen and (max-width: 460px) {
-    border-top: 1px solid rgba(227, 227, 227, 1);
+  @media screen and (max-width: 1220px) {
+    border-top: 1px solid;
     background-position: top 120px center;
     background-size: 284px 225px;
     padding: 40px 0 60px;
     margin: 0 18px 0;
+    @include borderLineColor($light-theme: true);
+    body.page_theme_dark & {
+      @include borderLineColor($light-theme: false);
+    }
   }
 }

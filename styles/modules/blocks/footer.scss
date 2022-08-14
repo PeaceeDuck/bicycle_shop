@@ -10,7 +10,7 @@
     box-sizing: border-box;
     padding: 84px 120px 60px;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       padding: 63px 0 16px;
       margin: 0 18px 0;
     }
@@ -21,7 +21,7 @@
     justify-content: space-between;
     margin-top: 85px;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       margin-top: 90px;
     }
   }
@@ -34,7 +34,7 @@
     margin: 0;
     padding-top: 15px;
 
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       font-weight: $fontWeightMedium;
       align-self: center;
       padding-top: 0;
@@ -42,7 +42,7 @@
   }
 
   &__theme {
-    @media screen and (max-width: 460px) {
+    @media screen and (max-width: 1220px) {
       display: none;
     }
   }
