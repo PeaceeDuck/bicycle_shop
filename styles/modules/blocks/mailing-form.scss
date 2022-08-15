@@ -1,0 +1,145 @@
+.mailing-form {
+  &__fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__label {
+    font-family: $fontFamily;
+    line-height: 32px;
+    font-weight: $fontWeightSemiBold;
+    font-size: 24px;
+    width: 229px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+
+    @media screen and (max-width: 1220px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__container {
+    width: 360px;
+    height: 50px;
+    position: relative;
+
+    @media screen and (max-width: 1220px) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    width: 360px;
+    height: 50px;
+    border: 1px solid rgba(199, 199, 199, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: $fontFamily;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: $fontWeightMedium;
+    padding-left: 20px;
+    box-sizing: border-box;
+    @include footer-background($light-theme: true);
+    body.page_theme_dark & {
+      @include footer-background($light-theme: false);
+    }
+    @include textDim($light-theme: true);
+    body.page_theme_dark & {
+      @include textDim($light-theme: false);
+    }
+
+    &::-moz-placeholder {
+      @include textDim($light-theme: true);
+      body.page_theme_dark & {
+        @include textDim($light-theme: false);
+      }
+    }
+
+    &::-webkit-input-placeholder{
+      @include textDim($light-theme: true);
+      body.page_theme_dark & {
+        @include textDim($light-theme: false);
+      }
+    }
+
+    &:hover {
+      @include text($light-theme: true);
+      body.page_theme_dark & {
+        @include text($light-theme: false);
+      }
+
+      &::-moz-placeholder {
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
+      }
+
+      &::-webkit-input-placeholder{
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
+      }
+    }
+
+    &:active, &:focus {
+      outline: 0;
+      outline-offset: 0;
+      border: 1px solid rgba(199, 199, 199);
+      @include text($light-theme: true);
+      body.page_theme_dark & {
+        @include text($light-theme: false);
+      }
+
+      &::-moz-placeholder {
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
+      }
+
+      &::-webkit-input-placeholder{
+        @include text($light-theme: true);
+        body.page_theme_dark & {
+          @include text($light-theme: false);
+        }
+      }
+
+    }
+
+    @media screen and (max-width: 1220px) {
+      width: 100%;
+    }
+  }
+
+  &__submit {
+    padding: 0;
+    position: absolute;
+    top: 11px;
+    right: 22px;
+    font-size: 13px;
+    font-weight: $fontWeightMedium;
+    line-height: 28px;
+    border: 0;
+    cursor: pointer;
+    display: none;
+    @include footer-background($light-theme: true);
+    body.page_theme_dark & {
+      @include footer-background($light-theme: false);
+    }
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+  }
+}

@@ -1,0 +1,164 @@
+.bike {
+  max-width: 1440px;
+  padding: 63px 120px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+
+    @media screen and (max-width: 1220px) {
+      flex-direction: column;
+      margin: 0 18px 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__types {
+    display: flex;
+    column-gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: flex-end;
+
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
+  }
+
+  &__type {
+    @include description-text;
+    margin: 0;
+    cursor: pointer;
+    margin-bottom: 7px;
+    @include textDimWithHover($light-theme: true);
+    body.page_theme_dark & {
+      @include textDimWithHover($light-theme: false);
+    }
+
+    &_selected {
+      font-weight: $fontWeightSemiBold;
+      @include textWithHover($light-theme: true);
+      body.page_theme_dark & {
+        @include textWithHover($light-theme: false);
+      }
+    }
+  }
+
+  &__label {
+    @media screen and (min-width: 461px) {
+      display: none;
+    }
+  }
+
+  &__select {
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    margin-top: 40px;
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    box-sizing: border-box;
+    padding: 0 7px 0;
+    font-size: 11px;
+    line-height: 14px;
+    border: 1px solid #E3E3E3;
+    height: 30px;
+    width: 114px;
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: 90px 11px;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+    @include background($light-theme: true);
+    body.page_theme_dark & {
+      @include background($light-theme: false);
+    }
+    @include dropDown($light-theme: true);
+    body.page_theme_dark & {
+      @include dropDown($light-theme: false);
+    }
+  }
+
+  &__option {
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    font-size: 11px;
+    line-height: 14px;
+    display: inline;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+  }
+
+  &__cards {
+    column-gap: 30px;
+    display: none;
+
+    @media screen and (max-width: 1220px) {
+      width: 100%;
+      margin: 20px 0 9px;
+      column-gap: 25vw;
+      overflow: hidden;
+      box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &_selected {
+      display: flex;
+    }
+  }
+
+
+  &__radio-buttons {
+    display: none;
+    width: fit-content;
+    column-gap: 5px;
+    margin: 0 auto 73px;
+
+    @media screen and (max-width: 1220px) {
+      display: flex;
+    }
+  }
+
+  &__radio {
+    margin: 0;
+    padding: 0;
+    width: 4px;
+    height: 4px;
+    opacity: 0;
+    position: absolute;
+
+    &:checked + .bike__radio-pseudo {
+      background-color: $fontColorGrey;
+    }
+  }
+
+  &__radio-pseudo {
+    display: inline-block;
+    position: relative;
+    transition: .3s ease;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #CACACA;
+    cursor: pointer;
+    bottom: 0;
+  }
+
+  @media screen and (max-width: 1220px) {
+    padding: 40px 0 0;
+  }
+}

@@ -1,0 +1,9 @@
+.page {
+  font-family: $fontFamily;
+  margin: 0;
+  padding: 0;
+  @include background($light-theme: true);
+  &_theme_dark {
+    @include background($light-theme: false);
+  }
+}

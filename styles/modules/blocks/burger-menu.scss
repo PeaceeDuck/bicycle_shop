@@ -1,0 +1,26 @@
+.burger-menu {
+  display: none;
+  border: 0;
+  height: 19px;
+  width: 22px;
+  flex-direction: column;
+  cursor: pointer;
+  row-gap: 5px;
+  justify-self: end;
+  padding: 0;
+  background-color: transparent;
+
+  @media screen and (max-width: 1220px) {
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+
+  &__line {
+    width: 22px;
+    height: 3px;
+    @include burgerLine($light-theme: true);
+    body.page_theme_dark & {
+      @include burgerLine($light-theme: false);
+    }
+  }
+}

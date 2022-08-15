@@ -1,0 +1,105 @@
+.promo {
+  margin: 0 auto;
+  max-width: 1440px;
+  position: relative;
+  padding: 156px 0 0 120px;
+  box-sizing: border-box;
+  background-image: url('../images/promo.jpg');
+  background-repeat: no-repeat;
+  background-position: top 94px right 0;
+  height: 930px;
+
+  &__title {
+    margin: 0 0 45px 0;
+
+    @media screen and (max-width: 1220px) {
+      margin-bottom: 428px;
+    }
+  }
+
+  &__text {
+    margin: 0 0 53px 0;
+
+    @media screen and (max-width: 1220px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__bike-name {
+    font-family: $fontFamily;
+    font-weight: $fontWeightRegular;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 18px;
+    @include text($light-theme: true);
+    body.page_theme_dark & {
+      @include text($light-theme: false);
+    }
+
+    &::after {
+      content: '';
+      margin-left: 30px;
+      width: 132px;
+      height: 2px;
+      @include lineColor($light-theme: true);
+      body.page_theme_dark & {
+        @include lineColor($light-theme: false);
+      }
+    }
+
+    @media screen and (max-width: 1220px) {
+      display: none;
+    }
+  }
+
+  &__bike-container {
+    position: absolute;
+    top: 421px;
+    right: 0;
+    width: 810px;
+    height: 430px;
+
+    @media screen and (max-width: 1220px) {
+      width: 234px;
+      height: 188px;
+      top: 357px;
+      right: unset;
+    }
+  }
+
+  &__bike-fixed {
+    position: sticky;
+    top: 421px;
+    left: 630px;
+    width: 440px;
+    height: 300px;
+    background-color: #f4f4f4;
+    background-image: url("../images/Cannondate_Systemsix_Himod_promo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: -20px 60px 220px rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: -20px 60px 220px rgba(0, 0, 0, .26);
+    }
+
+    @media screen and (max-width: 1220px) {
+      width: 234px;
+      height: 160px;
+      background-size: 180px 139px;
+      top: 357px;
+      left: 18px;
+    }
+  }
+
+  @media screen and (max-width: 1220px) {
+    height: fit-content;
+    padding: 114px 18px 80px;
+    background-position: top 234px right 18px;
+    background-size: 254px 348px;
+  }
+}

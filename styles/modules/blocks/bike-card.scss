@@ -1,0 +1,73 @@
+.bike-card {
+  &__image {
+    height: 340px;
+    width: 340px;
+    border: 20px solid $backgroundLight;
+    border-radius: 20px;
+    box-shadow: 0 20px 140px rgba(0, 0, 0, .06);
+    margin-bottom: 11px;
+    cursor: pointer;
+    background-color: $backgroundLight;
+
+    &:hover {
+      box-shadow: 0 20px 140px rgba(0, 0, 0, .11);
+
+      @media screen and (max-width: 1220px) {
+        box-shadow: unset;
+      }
+    }
+
+    @media screen and (max-width: 1220px) {
+      border: 0;
+      box-shadow: unset;
+      height: 254px;
+      width: 254px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    margin: 0 0 0 6px;
+    font-family: $fontFamily;
+    font-weight: $fontWeightSemiBold;
+    line-height: 28px;
+    font-size: 18px;
+    @include bikeCardText($light-theme: true);
+    body.page_theme_dark & {
+      @include bikeCardText($light-theme: false);
+    }
+
+    @media screen and (max-width: 1220px) {
+      font-size: 14px;
+      line-height: 18px;
+      margin: 2px 0 0 0;
+      text-align: center;
+      color: $fontColorGrey;
+    }
+  }
+
+  @media screen and (max-width: 1220px) {
+    border-radius: 20px;
+    box-shadow: 0 20px 140px rgba(0, 0, 0, .1);
+    width: 284px;
+    height: 306px;
+    padding: 13px 15px 16px;
+    box-sizing: border-box;
+    position: relative;
+    transition: .6s ease;
+    background: $backgroundLight;
+
+    &:first-of-type {
+      margin-left: calc(50vw - 142px);
+    }
+
+    &:last-of-type {
+      margin-right: calc(50vw - 142px);
+    }
+
+    &:hover {
+      box-shadow: 0 20px 140px rgba(0, 0, 0, .11);
+    }
+
+  }
+}

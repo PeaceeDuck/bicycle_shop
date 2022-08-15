@@ -1,0 +1,26 @@
+.theme {
+  display: flex;
+  width: 138px;
+  justify-content: space-between;
+  align-items: center;
+
+  &__image {
+    height: 28px;
+
+    &_light {
+      width: 28px;
+      @include lightThemeImage($light-theme: true);
+      body.page_theme_dark & {
+        @include lightThemeImage($light-theme: false);
+      }
+    }
+
+    &_dark {
+      width: 19px;
+      @include darkThemeImage($light-theme: true);
+      body.page_theme_dark & {
+        @include darkThemeImage($light-theme: false);
+      }
+    }
+  }
+}

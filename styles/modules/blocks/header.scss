@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  min-height: 74px;
+  position: fixed;
+  z-index: 3;
+  @include background($light-theme: true);
+  body.page_theme_dark & {
+    @include background($light-theme: false);
+  }
+
+  &__container {
+    max-width: 1440px;
+    padding: 28px 120px;
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    @media screen  and (max-width: 1220px){
+      padding: 25px 18px 30px;
+    }
+  }
+
+  &__items {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    column-gap: 34px;
+
+    @media screen  and (max-width: 1220px){
+      display: none;
+    }
+  }
+
+  &__item {
+    font-family: $fontFamily;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: $fontWeightMedium;
+    cursor: pointer;
+    @include textWithHover($light-theme: true);
+    body.page_theme_dark & {
+      @include textWithHover($light-theme: false);
+    }
+  }
+
+
+}
